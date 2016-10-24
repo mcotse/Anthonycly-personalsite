@@ -1,0 +1,115 @@
+$white: #f7f7f7
+$a-tags: 'a, a:active, a:hover, a:visited'
+$a-tags-hover: 'a:active, a:hover'
+html
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	text-rendering: optimizelegibility
+body
+	background-color: black
+	font-family: 'EB Garamond', sans-serif
+
+#{$a-tags}
+	color: $white
+	text-decoration: none
+#{$a-tags-hover}
+	color: $white
+
+.main-title
+	color: $white
+.main-name
+	font-size: 7em
+	position: relative
+	// font-weight:
+
+.main-hook
+	font-size: 1.5em
+	margin-bottom: 0
+
+.secondary-hook
+	font-size: 1.5em
+
+.social-icons
+	margin-top: 10px
+
+.social-icons a
+	margin-right: 10px
+	font-size: 1.5em
+
+header
+	height: 100%
+	position: relative
+	overflow: hidden
+	background: url(/images/bg.jpg) center no-repeat
+	background-size: cover
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+
+.overlay
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	position: absolute
+	background: url(/images/bg-blurred.jpg) center no-repeat
+	background-size: cover
+	z-index: 0
+	opacity: 0
+
+.container
+	padding: 40px
+	padding-top: 55vh
+	height: 100vh
+	width: 100%
+	position: relative
+	z-index: 1
+
+.container .main-title
+	// resize: vertical
+	position: absolute
+	// margin-top: 70%
+.gallery
+	background-color: black
+	padding: 5vw
+	padding-top: 50px
+	font-size: 0
+	display: -ms-flexbox
+	-ms-flex-wrap: wrap
+	-ms-flex-direction: column
+	-webkit-flex-flow: row wrap
+	flex-flow: row wrap
+	display: -webkit-box
+	display: flex
+	justify-content: center
+
+.gallery div
+	// -webkit-box-flex: auto
+	// -ms-flex: auto
+	// flex: auto
+	width: 300px
+	height: 200px
+	overflow: hidden
+	margin: 0.5vw
+
+.gallery div a img
+	width: 100%
+	// height: auto
+
+@media screen and (max-width: 400px)
+	.gallery div
+		margin: 0
+	.gallery
+		padding: 0
+
+@media (max-width: 600px)
+	.main-name
+		font-size: 4em
+		// text-align: center
+	.main-title
+		text-align: center
+		position: absolute
+		bottom: 10%
+	.container
+		margin: 0 auto
+		padding: 10px
